@@ -1,0 +1,322 @@
+
+/* ===== 基本設定 ===== */
+:root {
+  --primary: #2563EB;
+  --secondary: #14B8A6;
+  --background: #F8FAFC;
+  --text: #1E293B;
+  --muted: #64748B;
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== 導覽列 ===== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 8%;
+  background: var(--white);
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: var(--primary);
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+nav a {
+  color: var(--muted);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* ===== 首頁主視覺 ===== */
+.hero {
+  padding: 110px 8%;
+  background: linear-gradient(135deg, #DBEAFE, #CCFBF1);
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--secondary);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 6vw, 58px);
+  line-height: 1.35;
+  margin-bottom: 22px;
+  color: #172554;
+}
+
+.hero p:not(.eyebrow) {
+  color: #475569;
+  margin-bottom: 30px;
+}
+
+/* ===== 按鈕 ===== */
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 700;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.button:hover {
+  background: #1D4ED8;
+  transform: translateY(-3px);
+}
+
+.button-light {
+  background: var(--white);
+  color: var(--primary);
+}
+
+/* ===== 內容區塊 ===== */
+.section {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.section h2,
+.feature h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.section > p:not(.eyebrow) {
+  color: var(--muted);
+  margin-bottom: 35px;
+}
+
+/* ===== 卡片 ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 35px;
+  text-align: left;
+}
+
+.card {
+  display: block;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid #E2E8F0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.1);
+}
+
+.card-icon {
+  font-size: 32px;
+}
+
+.card h3 {
+  font-size: 21px;
+  margin: 12px 0 8px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.card-link {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ===== 特色區塊 ===== */
+.feature {
+  margin: 0 8% 80px;
+  padding: 45px;
+  border-radius: 20px;
+  background: linear-gradient(120deg, #2563EB, #0D9488);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.feature .eyebrow {
+  color: #99F6E4;
+}
+
+.feature p:not(.eyebrow) {
+  color: #E0F2FE;
+}
+
+/* ===== 內頁 ===== */
+.page-hero {
+  padding: 65px 8%;
+  background: linear-gradient(135deg, #DBEAFE, #CCFBF1);
+}
+
+.page-hero h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 55px 24px 80px;
+}
+
+.content-block {
+  background: var(--white);
+  padding: 28px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  border: 1px solid #E2E8F0;
+}
+
+.content-block h2 {
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.content-block p,
+.content-block li {
+  color: #475569;
+}
+
+.content-block ul,
+.content-block ol {
+  padding-left: 24px;
+}
+
+/* ===== 圖表 ===== */
+.chart-container {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  margin-top: 25px;
+}
+
+.bar-chart {
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+  gap: 16px;
+  height: 220px;
+  padding-top: 20px;
+  border-bottom: 1px solid #CBD5E1;
+}
+
+.bar-item {
+  flex: 1;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.bar {
+  width: 100%;
+  max-width: 55px;
+  margin: 0 auto 8px;
+  background: linear-gradient(180deg, #14B8A6, #2563EB);
+  border-radius: 8px 8px 0 0;
+}
+
+/* ===== 頁尾 ===== */
+.site-footer {
+  background: #172554;
+  color: #CBD5E1;
+  text-align: center;
+  padding: 30px 15px;
+  font-size: 13px;
+}
+
+/* ===== 手機版 ===== */
+@media (max-width: 760px) {
+  .site-header {
+    flex-direction: column;
+    padding: 15px 5%;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 10px 16px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 75px 6%;
+  }
+
+  .section {
+    padding: 55px 6%;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature {
+    margin: 0 5% 50px;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-hero h1 {
+    font-size: 30px;
+  }
+}
