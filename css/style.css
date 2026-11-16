@@ -320,3 +320,8 @@ nav a:hover {
     font-size: 30px;
   }
 }
+
+nav a.active {
+  color: var(--primary);
+  font-weight: 700;
+}
