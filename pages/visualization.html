@@ -4,101 +4,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="透過圖表認識專注時間與學習狀態">
-  <title>數據視覺化｜FocusLab</title>
+  <title>專注力數據視覺化｜FocusLab</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
   <header class="site-header">
-    <a class="logo" href="../index.html">FocusLab</a>
-    <nav>
-      <a href="../index.html">首頁</a>
-      <a href="focus.html">認識專注力</a>
-      <a href="techniques.html">學習技巧</a>
-      <a href="time-management.html">時間管理</a>
-      <a href="visualization.html">數據視覺化</a>
-      <a href="about.html">關於我們</a>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">FocusLab</a>
+
+      <div class="nav-links">
+        <a href="../index.html">首頁</a>
+        <a href="focus.html">認識專注力</a>
+        <a href="techniques.html">專注技巧</a>
+        <a href="time-management.html">時間管理</a>
+        <a href="visualization.html">數據視覺化</a>
+        <a href="about.html">關於我們</a>
+      </div>
     </nav>
   </header>
 
-  <main>
+  <main class="container">
     <section class="page-hero">
-      <p class="eyebrow">DATA & INSIGHTS</p>
-      <h1>專注數據視覺化</h1>
-      <p>透過圖表觀察學習時間的變化。</p>
+      <h1>專注力數據視覺化</h1>
+      <p>透過圖表觀察每日專注時間，了解自己的學習狀況。</p>
     </section>
 
-    <section class="page-content">
-      <article class="content-block">
-        <h2>為什麼要使用數據視覺化？</h2>
-        <p>
-          將資料轉換成圖表，可以更直觀地觀察數據變化。
-          例如記錄每天的學習時間，就能比較不同日期的
-          學習狀況，作為調整讀書計畫的參考。
-        </p>
-      </article>
+    <section class="content-section">
+      <h2>每日專注時間</h2>
+      <p>
+        以下為一週的示範專注時間資料，單位為分鐘。
+        這些數據是範例，並非實際測量結果。
+      </p>
 
-      <article class="content-block">
-        <h2>一週專注學習時間</h2>
-        <p>
-          以下是虛構的示範資料，單位為分鐘，
-          僅用來展示圖表呈現方式，並非真實測量結果。
-        </p>
+      <div class="chart-container">
+        <h3>每日專注時間（分鐘）</h3>
 
-        <div class="chart-container">
-          <h3>每日專注時間（分鐘）</h3>
+        <div class="bar-chart">
+          <div class="bar-item">
+            <div class="bar" style="height: 50%;"></div>
+            <p>30</p>
+            <span>週一</span>
+          </div>
 
-          <div class="bar-chart">
-            <div class="bar-item">
-              <div class="bar" style="height: 50%;"></div>
-              <span>週一</span>
-              <p>30</p>
-            </div>
+          <div class="bar-item">
+            <div class="bar" style="height: 75%;"></div>
+            <p>45</p>
+            <span>週二</span>
+          </div>
 
-            <div class="bar-item">
-              <div class="bar" style="height: 75%;"></div>
-              <span>週二</span>
-              <p>45</p>
-            </div>
+          <div class="bar-item">
+            <div class="bar" style="height: 67%;"></div>
+            <p>40</p>
+            <span>週三</span>
+          </div>
 
-            <div class="bar-item">
-              <div class="bar" style="height: 65%;"></div>
-              <span>週三</span>
-              <p>40</p>
-            </div>
+          <div class="bar-item">
+            <div class="bar" style="height: 92%;"></div>
+            <p>55</p>
+            <span>週四</span>
+          </div>
 
-            <div class="bar-item">
-              <div class="bar" style="height: 90%;"></div>
-              <span>週四</span>
-              <p>55</p>
-            </div>
-
-            <div class="bar-item">
-              <div class="bar" style="height: 80%;"></div>
-              <span>週五</span>
-              <p>50</p>
-            </div>
+          <div class="bar-item">
+            <div class="bar" style="height: 83%;"></div>
+            <p>50</p>
+            <span>週五</span>
           </div>
         </div>
-      </article>
-
-      <article class="content-block">
-        <h2>如何解讀圖表？</h2>
-        <ul>
-          <li>比較不同日期的專注時間。</li>
-          <li>觀察學習時間是否有明顯變化。</li>
-          <li>回想當天的環境與學習安排。</li>
-          <li>依照觀察結果調整未來的學習計畫。</li>
-        </ul>
-      </article>
-
-      <a class="button" href="about.html">認識 FocusLab</a>
+      </div>
     </section>
+
+    <section class="content-section">
+      <h2>數據觀察</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>最高專注時間</h3>
+          <p>週四，55 分鐘。</p>
+        </article>
+
+        <article class="card">
+          <h3>最低專注時間</h3>
+          <p>週一，30 分鐘。</p>
+        </article>
+
+        <article class="card">
+          <h3>一週平均時間</h3>
+          <p>平均每天 44 分鐘。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>學習建議</h2>
+      <p>
+        可以持續記錄每天的專注時間，觀察不同日期的變化，
+        並嘗試使用番茄鐘或適當休息，逐步建立適合自己的學習習慣。
+      </p>
+    </section>
+
+    <p class="back-home">
+      <a href="../index.html">← 回到首頁</a>
+    </p>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 FocusLab｜專注力學習實驗室</p>
-    <p>讓每一次學習，都更有方向。</p>
+    <p>© <span id="year"></span> FocusLab 專注力學習實驗室</p>
   </footer>
 
   <script src="../js/main.js"></script>
