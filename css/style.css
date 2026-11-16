@@ -239,38 +239,70 @@ nav a:hover {
 }
 
 /* ===== 圖表 ===== */
+
+/* ===== 每日專注時間柱狀圖 ===== */
 .chart-container {
-  background: var(--white);
+  background: #FFFFFF;
   padding: 25px;
   border-radius: 16px;
   border: 1px solid #E2E8F0;
   margin-top: 25px;
+  overflow: hidden;
+}
+
+.chart-container h3 {
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .bar-chart {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-around;
-  gap: 16px;
-  height: 220px;
-  padding-top: 20px;
-  border-bottom: 1px solid #CBD5E1;
+  gap: 12px;
+  height: 260px;
+  padding: 20px 10px 0;
+  border-bottom: 2px solid #CBD5E1;
 }
 
 .bar-item {
   flex: 1;
-  text-align: center;
-  color: var(--muted);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: #64748B;
   font-size: 13px;
 }
 
 .bar {
   width: 100%;
   max-width: 55px;
-  margin: 0 auto 8px;
+  min-height: 10px;
   background: linear-gradient(180deg, #14B8A6, #2563EB);
   border-radius: 8px 8px 0 0;
+  transition: height 0.3s;
 }
+
+.bar-item p {
+  margin: 5px 0;
+  font-weight: 700;
+  color: #2563EB;
+}
+
+@media (max-width: 480px) {
+  .bar-chart {
+    gap: 6px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .bar-item {
+    font-size: 11px;
+  }
+}
+
 
 /* ===== 頁尾 ===== */
 .site-footer {
